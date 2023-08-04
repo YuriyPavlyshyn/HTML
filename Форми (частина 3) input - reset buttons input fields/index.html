@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форми (частина 3)</title>
+</head>
+<body>
+
+    <input type="search"> <!-- - тут відображається поле пошуку та можливість після введення у нього тексту - видаляти його шляхом натискання на кнопку "Х" -->
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <form action="#">
+        <label for="user">Імя</label>
+        <input type="text" name="user-name" id="user" tabindex="1" autofocus> <!-- - тут ми зазначаємо, що "автофокус" - тоьто початкове знаходження курсора має знаходитись саме у цьому інпуті -->
+        <br>
+        <br>
+        <label for="pass">Пароль</label>
+        <input type="password" name="password" id="pass" tabindex="2">
+        <br>
+        <br>
+        <input type="submit" value="Відправити">
+    </form>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <form action="#">
+        <input type="number" min="2" max="10" step="2"> <!-- - це поле із можливістю вибору цифр, в даному випадку ми задаємо мінімальне значення "2" та максимальне "10", а також "step" який визначає цифру на яку повинно змінюватись число при натисканні вниз або вверх. При введенні числа нижчого або вищого за встановлені мінімальні та максимальні значення буде появлятися підсказка із повідомленням про не коректність введених значень -->
+        <input type="submit" value="Відправити">
+    </form>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <input type="text" name="menu" list="menu"> <!-- - меню з випадаючим списком -->
+    <datalist id="menu">
+        <option value="окунь"></option>
+        <option value="карась"></option>
+        <option value="лящ"></option>
+        <option value="щука"></option>
+        <option value="товстолоб"></option>
+        <option value="білий амур"></option>
+    </datalist>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <input type="month"> <!-- - тут ми можемо обирати місяці з роками -->
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <input type="week"> <!-- - тут ми можемо обирати тижні, з понеділка по неділю одночасно -->
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <input type="datetime-local"> <!-- - поле для вибору дати та часу одночасно-->
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <input type="time"> <!-- - поле для вибору часу -->
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <input type="date"> <!-- - поле для вибору дати -->
+    <br>
+    <br>
+    <br>
+    <br>
+    <form action="#">
+        <label for="user">Імя</label>
+        <input type="text" name="user-name" id="user" tabindex="1" required> <!-- - Атрибут "required" використовується для того щоб поля видавали обовязкові нагадування про заповнення цих полей -->
+        <br>
+        <br>
+        <label for="pass">Пароль</label>
+        <input type="password" name="password" id="pass" tabindex="2" required>
+        <br>
+        <br>
+        <input type="submit" value="Відправити">
+    </form>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <form action="#">
+        <label for="user">Імя</label>
+        <input type="text" name="user-name" id="user" tabindex="1"> <!-- - тут ми маркуємо кножне поле та елементи для правильних переходів між ними за допомогою "Tab". Тобто фактично можна змінювати послідовність переходів між елементами, наприклад починати не зверхніх елементів, а -->
+        <br>
+        <br>
+        <label for="pass">Пароль</label>
+        <input type="password" name="password" id="pass" tabindex="2">
+        <br>
+        <br>
+        <input type="checkbox" name="mail" id="mail" tabindex="3">
+        <label for="mail">Відправляти листи на пошту</label>
+        <br>
+        <br>
+        <input type="submit" value="Відправити">
+        <input type="reset" value="Скинути">
+    </form>
+    <!-- tabindex - це переключення між полями -->
+    <br>
+    <br>
+    <br>
+    <br>
+    <button >Кнопка <img src="./img/login-square-arrow-button-outline_icon-icons.com_73220.png" alt="Enter" style="width: 12px; height: 12px;"></button> <!-- - тут ми створюємо іншим шляхом кнопку із вмістом імеджу, відстань між назвою кнопки та імеджом в межах цих параметрів можна відсунути лише на один пробіл, все інше через CSS. За замовчуванням кнопка виконує функцію "submit", але функцію кнопки можна змінювати через - type="reset/submit". Якщо задати тип "button" кнопка буде виконувати звичайну роль кнопки не відправляючи дані на сервер та не буде скидувати дані-->
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <input type="image" src="./img/login-square-arrow-button-outline_icon-icons.com_73220.png" alt="Enter"> <!-- - тут ми створюємо кнопку із завантаженого зображення -->
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <input type="button" value="Кнопка"> <!-- - тут ми створюємо посто кнопку -->
+   
+    <br>
+    <br>
+    <br>
+    <br>
+    <form action="#">
+        <label for="user">Імя</label>
+        <input type="text" name="user-name" id="user">
+        <br>
+        <br>
+        <label for="pass">Пароль</label>
+        <input type="password" name="password" id="pass">
+        <br>
+        <br>
+            <input type="checkbox" name="mail" id="mail">
+            <label for="mail">Відправляти листи на пошту</label>
+            <br>
+            <br>
+            <input type="submit" value="Відправити">
+            <input type="reset" value="Скинути">
+        </form>
+</body>
+</html>

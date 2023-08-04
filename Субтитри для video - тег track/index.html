@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Субтитри для video - тег track</title>
+</head>
+<body>
+
+    <!-- Тег track визначає текстові дорожки для елементів audio/video -->
+    <!-- формат: Web/TT - .vtt -->
+    <video src="./video/медуза.mp4" controls width="500px" height="300px">
+        <track src="./text.vtt" kind="subtitles" srclang="en" label="English"> - <!-- Для того щоб субтитри відображались потрібно прописати певні налаштування та безпосередньо сам текст субтитрів у файлі - "text.vtt" (відкрити файл та подивитися що потрібно прописати). Щодо створення цього файлу: створюємо файл на робочому столі обираючи: "Windows Word File", появляється файл із .txt розширенням, спочатку міняємо назву файлу на "text" і зберігаємо, після цього натискаємо ще раз на: "Перейменувати" та змінюємо формат з .txt на .vtt !!!  -->
+    </video>
+    <!-- Атрибут "src" - джерело з якого береться текст субтитрів -->
+    <!-- Атрибут "kind": має значення "captions", "chapters", "metadata", "subtitles" -->
+    <!-- Атрибут "subtitles" - визначає тип текстової дорожки -->
+    <!-- Атрибут "label" - визначає назву текстової доріжки -->
+    <!-- Атрибут "srclang" - вказує мову текстових даних доріжки і являється обовязковим якщо у атрибута "kind" значення "subtitles" -->
+</body>
+</html>

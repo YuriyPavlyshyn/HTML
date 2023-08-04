@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форми (частина 2)</title>
+</head>
+<body>
+
+    <form action="#"enctype="multipart/form-data"> <!-- - краще дані передавати на сервер по частинам, за це й відповідає "multipart" -->
+        <p>Додати Ваше фото:</p>
+        <input type="file" name="photo">
+        <br>
+        <br>
+        <input type="submit" value="Завантажити">
+    </form>
+
+    <!-- type="file" - це поле для завантаження файлу
+    enctype - значення - multipart/form-data -->
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <form action="#">
+        <p>Які Ваші любимі квіти ?</p>
+        <select name="flowers" id="flowers" multiple size="10"><!-- - значення/атрибут "multiple" дозволяє вибирати одразу декілька відповіддей в списку, такий ефект ми отримуємо при натисканні і зажатті кнопки "Ctrl". size="10" - тут ми описуємо на скільки широко повинна бути відкрита рамка, число відповідає числу наявних значиень в мультиселекті-->
+        <option value="фіалки">фіалки</option>
+        <option value="рози">рози</option>
+        <option value="тюльпани">тюльпани</option>
+        <option value="ромашки">ромашки</option>
+        <option value="підсніжники">підсніжники</option>
+        <option value="лілії" selected>лілії</option> <!-- - атрибут "selected" робить обраним те чи інше - "value" за замовчування, однак його в селекті можна зняти обравши інше значення ("value"). На мою думку це можна використовувати як надання пропозиції щодо обрання саме цих значень як рекомендованих -->
+        <option value="фіалки">фіалки</option>
+        <option value="рози">рози</option>
+        <option value="тюльпани">тюльпани</option>
+        <option value="ромашки">ромашки</option>
+        <option value="підсніжники">підсніжники</option>
+        <option value="лілії">лілії</option>
+        </select> 
+        <br>
+        <br>
+        <input type="submit" value="Відправити">
+    </form>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+    <form action="#">
+        <p>Який рік Вашого народження ?</p>
+        <select name="year" id="year">
+            <option value="1995">1995 рік</option> <!-- - тут "value" можна задавати або ні, але все таки краще це робити  -->
+            <option value="1996">1996 рік</option>
+            <option value="1997">1997 рік</option>
+            <option value="1998">1998 рік</option>
+            <option value="1999">1999 рік</option>
+            <option value="2000">2000 рік</option>
+            <option value="2001">2001 рік</option>
+        </select>
+        <br>
+        <br>
+        <input type="submit" value="Відправити">
+    </form>
+
+    <!-- select - список який відкривається
+    option - варіанти відповіді
+    multiple - дозволяє створювати мультиселект в якому можна обирати одразу декілька варіантів відповіддей -->
+    
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <form action="#">
+        <p>Який тег визначає заголовок першого типу ?</p>
+        <p>Запитання № 1:</p>
+        <input type="radio" name="question1" value="h1"> Тег &lt;h1&gt;
+        <br>
+        <input type="radio" name="question1" value="p"> Тег &lt;p&gt;
+        <br>
+        <input type="radio" name="question1" value="i"> Тег &lt;i&gt; <!-- - "name" має бути одинаковим в кожному інпуті, а в "value" різні значення -->
+        <br>
+        <br>
+        <input type="submit" value="Відправити"> 
+    </form>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    <form action="#">
+        <p>Введіть сюди свій коментар</p>
+        <textarea name="comments" id="comments" cols="50" rows="20" placeholder="Вкажіть ось тут свій коментар"></textarea> <!-- - placeholder="Вкажіть ось тут свій коментар" визначає інформацію що буде знаходитися безпосередньо в зоні інпута -->
+        <br>
+        <br>
+        <input type="checkbox" name="subscribe" id="subscribe">
+        <label for="subscribe">Вам відправляти листи на пошту ?</label>
+        <br>
+        <br>
+        <input type="submit" value="Відправити">
+    </form>
+
+      
+    <!-- textarea - це багато строкове текстове поле
+    rows - висота багато строкового поля
+    cols - ширина багато строкового поля -->
+</body>
+</html>

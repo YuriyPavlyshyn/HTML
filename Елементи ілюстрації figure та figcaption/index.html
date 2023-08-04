@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Елементи ілюстрації</title>
+    <style>
+        figure {
+            border: 1px solid black;
+            max-width: 805px;
+            padding: 5px;
+            margin: auto;
+        }
+
+        figcaption {
+            background-color: peachpuff;
+            color: burlywood;
+            padding: 5px;
+            text-align: center;
+        }
+
+        /* ! Якщо фактична ширина становить 500 пікселів доприкладу і в стилізації вказати максимальну ширину більшу за фактичний розмір елемента заображення - появляється лишній простір справої сторони, відповідно можна додати ще один елемент - зображення у відповідності до залишку розміру */
+    </style>
+</head>
+<body>
+    <figure> <!-- Це типу як контейнер для зображень -->
+        <img src="./img/html.jpg" alt="HTML" style="width: 500px; height: 300px;">
+        <img src="./img/html image-2.png" alt="HTML" style="width: 300px; height: 300px;">
+        <figcaption>HTML image</figcaption> <!-- Це типу як підпис (заголовок) для зображення -->
+    </figure>
+</body>
+</html>

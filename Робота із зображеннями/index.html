@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- src - source (джерело) -->
+    <!-- alt - alternative text (альтернативний текст) -->
+
+    <!-- Тут картинка із зовнішнього джерела -->
+    <img src="https://champion.com.ua/storage/news/main/regular/0d4dbcf49e30611811e8ff01da0dc604.jpg" alt="Картинка із усміхненою дівчиною" style="width: 500px; height: 500px;"> <br>
+
+    <!-- Тут завантажена картинка із альтернативного безплатного зовнішнього джерела: https://unsplash.com/ -->
+    <img src="./img/depositphotos_37383675-stock-photo-portrait-of-a-young-beautiful.jpg" alt="Картинка із усміхненою дівчиною" width="500px" height="500px"> <br>
+
+    <!-- Тут картинка завантажена із джерела де картинки можуть бути захищеними авторським правом -->
+    <img src="./img/HTML icon.png" alt="HTML іконка" width="500" height="500"> <br>
+
+    <!-- Розмір зображення можна прописувати через атрибут <style> в <img>, або просто в кінці тегу вказувати width та height -->
+    <!-- Можна вказувати висоту без вказання "px" параметри ширини та висоти у любому випадку вираховуються у пікселях тому розуміють значення без вказання формату -->
+
+    <!-- !!!! Взазувати ширину та висоту все таки краще через атрибут style, так як у випадку задання в CSS або head стилю для IMG - width: 100%, стиль буде перебивати це дефолтне значення у кожному індивідуальному випадку окремо !!!! -->
+
+
+    <!-- Тут ми робимо картинку посиланням із переходом на актуальну сторінку -->
+    <a href="https://www.google.com/" target="_blank">
+        <img src="https://img.freepik.com/premium-psd/google-icon-isolated_68185-565.jpg" alt="Іконка гугл" style="width: 500px; height: 300px;">
+    </a>
+    <br>
+
+    <!-- Ось тут ми додаємо гівку (gif) -->
+    <img src="./img/oie_14175751vZSQRLEn.webp" alt="Песик ловить мяч" style="width: 500px; height: 300px;">
+    <br>
+
+    Види форматів зображень:
+
+    SVG - Scalable Vector Graphics (масштабована векторна графіка) - .svg (для логотипів та іконок)
+
+    JPEG - Joint Photografic Expert Group (Об'єднана експертна група з фотографій) - .jpeg (для зжаття та зберігання повноцінних фотографій) - він може відображати 16 мільйонів кольорів але при зжиманні погіршує якість зображення
+
+    PNG - Portable Network Grafics (Портативна мережева графіка) - .png (при зжатті не погіршує якість зображення, цей формат підтримує можливість зміни прозорості)
+
+    GIF - Grafics Interchange Format (Формат обміну графіками) - .gif (підтримує 256 кольорів та потрібен для додавання анімації на сторінці)
+
+    APNG - Animated Portable Netvork Grafics (Анімована портативна мережева графіка) - .apng (це суміш з png та gif)
+
+
+</body>
+</html>

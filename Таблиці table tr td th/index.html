@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Таблиці</title>
+
+    <style>
+        table, td, th {
+            border: 1px solid black;
+            border-collapse: collapse; /* Забирає двойні рамки ячейок та таблиці загалом, перетворюючи суцільну таблицю з одним бордером для всіх елементів у ній */
+            /* padding: 10px; Задати внутрішні відступи між текстом для ячейок*/
+        }
+
+        table {
+            border-spacing: 10px; /* Для відступів між границями бордерів в середині таблиці, але цей параметр працюватиме лише якщо змінити параметри border-collapse: separate; */
+        }
+
+        /* thead {
+            background-color: burlywood; Тут стилізація останньої таблиці відповідно до семантики оформлених елементів 
+        }
+
+        tbody {
+            background-color: coral;
+        }
+
+        tfoot {
+            background-color: darkkhaki;
+        } */
+
+    </style>
+</head>
+<body>
+
+    <table>
+        <tr>
+            <th style="width: 100px;">Hello</th> <!-- Зміна ширини першого заголовку -->
+            <th>Hello</th>
+            <th>Hello</th>
+        </tr>
+        <tr>
+            <td>World</td>
+            <td>World</td>
+            <td>World</td>
+        </tr>
+        <tr>
+            <td>World</td>
+            <td>World</td>
+            <td>World</td>
+        </tr>
+    </table>
+    <br>
+    <hr>
+
+    <table>
+        <tr style="height: 100px";> <!-- Зміна висоти колонок заголовків -->
+            <th>Hello</th>
+            <th>Hello</th>
+            <th>Hello</th>
+        </tr>
+        <tr>
+            <td>World</td>
+            <td>World</td>
+            <td>World</td>
+        </tr>
+        <tr>
+            <td>World</td>
+            <td>World</td>
+            <td>World</td>
+        </tr>
+    </table>
+    <br>
+    <hr>
+
+    <table style="width: 300px";> <!-- Розширення усієї таблиці на 300 пікселів -->
+        <tr>
+            <th>Hello</th>
+            <th>Hello</th>
+            <th>Hello</th>
+        </tr>
+        <tr>
+            <td>World</td>
+            <td>World</td>
+            <td>World</td>
+        </tr>
+        <tr>
+            <td>World</td>
+            <td>World</td>
+            <td>World</td>
+        </tr>
+    </table>
+    <br>
+    <hr>
+
+    <table style="width: 70%";> <!-- Розширення усієї таблиці на 70% відносно до загальних налаштувань "body" -->
+        <tr>
+            <th>Hello</th>
+            <th>Hello</th>
+            <th>Hello</th>
+        </tr>
+        <tr>
+            <td>World</td>
+            <td>World</td>
+            <td>World</td>
+        </tr>
+        <tr>
+            <td>World</td>
+            <td>World</td>
+            <td>World</td>
+        </tr>
+    </table>
+    <br>
+    <hr>
+
+    <table>
+        <caption style="font-weight: 700;">HTML таблиця</caption> <!-- Тег "caption" створює назву таблиці, його потрібно ставити зразу після тегу <table> -->
+        <tr>
+            <th>Hello</th>
+            <th>Hello</th>
+            <th>Hello</th>
+        </tr>
+        <tr>
+            <td>World</td>
+            <td>World</td>
+            <td>World</td>
+        </tr>
+        <tr>
+            <td>World</td>
+            <td>World</td>
+            <td>World</td>
+        </tr>
+    </table>
+    <br>
+    <hr>
+
+    <table style="width: 400px;">
+        <tr>
+            <th colspan="2">Hello</th> <!-- Тут ми обєднюємо дві строки зашоловку в одну строку -->
+            <th>Hello</th>
+        </tr>
+        <tr>
+            <td>World</td>
+            <td>World</td>
+            <td>World</td>
+        </tr>
+        <tr>
+            <td>World</td>
+            <td>World</td>
+            <td>World</td>
+        </tr>
+    </table>
+    <br>
+    <hr>
+
+    <table style="width: 400px;">
+        <tr>
+            <th rowspan="3">Hello</th> <!-- Тут ми обєднюємо три строки заголовку вертикально в одну строку -->
+            <th>Hello</th>
+            <th>Hello</th>
+        </tr>
+        <tr>
+            <td>World</td>
+            <td>World</td>
+        </tr>
+        <tr>
+            <td>World</td>
+            <td>World</td>
+        </tr>
+    </table>
+    <br>
+    <hr>
+
+
+    <table style="width: 70%";> 
+        <caption>HTML таблиця</caption>
+        <colgroup>
+            <col span="2" style="background-color: aqua;"> <!-- col завжди має бути в colgroup - в даній ситуації стилізуються перші 2 колонки  -->
+            <col span="3" style="background-color: darkorchid;"> <!-- в даній ситуації стилізуються наступні 3 колонки -->
+            <col span="1" style="background-color: burlywood;"> <!-- в даній ситуації стилізуються остання колонка -->
+        </colgroup>
+        <tr>
+            <th>Hello</th>
+            <th>Hello</th>
+            <th>Hello</th>
+            <th>Hello</th>
+            <th>Hello</th>
+            <th>Hello</th>
+        </tr>
+        <tr>
+            <td>World</td>
+            <td>World</td>
+            <td>World</td>
+            <td>World</td>
+            <td>World</td>
+            <td>World</td>
+        </tr>
+        <tr>
+            <td>World</td>
+            <td>World</td>
+            <td>World</td>
+            <td>World</td>
+            <td>World</td>
+            <td>World</td>
+        </tr>
+        <tr>
+            <td>World</td>
+            <td>World</td>
+            <td>World</td>
+            <td>World</td>
+            <td>World</td>
+            <td>World</td>
+        </tr>
+        <tr>
+            <td>World</td>
+            <td>World</td>
+            <td>World</td>
+            <td>World</td>
+            <td>World</td>
+            <td>World</td>
+        </tr>
+    </table>
+    <br>
+    <hr>
+
+    <table style="width: 70%";> 
+        <caption>HTML таблиця</caption>
+        <colgroup>
+            <col span="2"> <!-- тут ми вказуємо значення "2" без стилізації для того щоб пропустити перші дві колонки -->
+            <col span="3" style="background-color: darkorchid;"> <!-- в даній ситуації стилізуються перші 3, 4, 5 колонки  -->
+        </colgroup>
+        <tr>
+            <th>Hello</th>
+            <th>Hello</th>
+            <th>Hello</th>
+            <th>Hello</th>
+            <th>Hello</th>
+            <th>Hello</th>
+        </tr>
+        <tr>
+            <td>World</td>
+            <td>World</td>
+            <td>World</td>
+            <td>World</td>
+            <td>World</td>
+            <td>World</td>
+        </tr>
+        <tr>
+            <td>World</td>
+            <td>World</td>
+            <td>World</td>
+            <td>World</td>
+            <td>World</td>
+            <td>World</td>
+        </tr>
+        <tr>
+            <td>World</td>
+            <td>World</td>
+            <td>World</td>
+            <td>World</td>
+            <td>World</td>
+            <td>World</td>
+        </tr>
+        <tr>
+            <td>World</td>
+            <td>World</td>
+            <td>World</td>
+            <td>World</td>
+            <td>World</td>
+            <td>World</td>
+        </tr>
+    </table>
+    <br>
+    <hr>
+
+    <table style="width: 70%";> 
+        <caption>HTML таблиця</caption>
+        <colgroup>
+            <col span="2" style="background-color: darkorchid;"> <!-- стилізуємо перші дві колонки -->
+            <col span="3" style="visibility: collapse;"> <!-- приховуємо 3, 4, 5 колонки  -->
+        </colgroup>
+        <tr>
+            <th>Hello</th>
+            <th>Hello</th>
+            <th>Hello</th>
+            <th>Hello</th>
+            <th>Hello</th>
+            <th>Hello</th>
+        </tr>
+        <tr>
+            <td>World</td>
+            <td>World</td>
+            <td>World</td>
+            <td>World</td>
+            <td>World</td>
+            <td>World</td>
+        </tr>
+        <tr>
+            <td>World</td>
+            <td>World</td>
+            <td>World</td>
+            <td>World</td>
+            <td>World</td>
+            <td>World</td>
+        </tr>
+        <tr>
+            <td>World</td>
+            <td>World</td>
+            <td>World</td>
+            <td>World</td>
+            <td>World</td>
+            <td>World</td>
+        </tr>
+        <tr>
+            <td>World</td>
+            <td>World</td>
+            <td>World</td>
+            <td>World</td>
+            <td>World</td>
+            <td>World</td>
+        </tr>
+    </table>
+    <br>
+    <hr>
+
+
+    <table style="width: 70%";> 
+        <caption>HTML таблиця</caption>
+
+        <thead>
+            <tr>
+                <th>Hello</th>
+                <th>Hello</th>
+                <th>Hello</th>
+                <th>Hello</th>
+                <th>Hello</th>
+                <th>Hello</th>
+            </tr>
+        </thead>
+        
+        <tbody>
+            <tr>
+                <td>World</td>
+                <td>World</td>
+                <td>World</td>
+                <td>World</td>
+                <td>World</td>
+                <td>World</td>
+            </tr>
+            <tr>
+                <td>World</td>
+                <td>World</td>
+                <td>World</td>
+                <td>World</td>
+                <td>World</td>
+                <td>World</td>
+            </tr>
+            <tr>
+                <td>World</td>
+                <td>World</td>
+                <td>World</td>
+                <td>World</td>
+                <td>World</td>
+                <td>World</td>
+            </tr> 
+        </tbody>
+        
+        <tfoot>
+            <tr>
+                <td>World</td>
+                <td>World</td>
+                <td>World</td>
+                <td>World</td>
+                <td>World</td>
+                <td>World</td>
+        </tr>
+        </tfoot>
+        
+    </table>
+    <br>
+    <hr>
+
+    <!-- thead - для групування вмісту заголовка
+    tbody - для групування основного змісту
+    tfood - для групування вмісту нижнього колонтитула -->
+    <!-- Ці три тега використовуються для стилізації окремих елементів таблиць - типу для семантики. Дивитися зверху в <head> як стилізуються ці окремі елементи  -->
+
+    <!-- colgroup - елементи застосовуються для стилізації
+    col - використовуються в середині colgroup
+    Є всього 4 типи стилізацій таблиць:
+    - width (ширина)
+    - visibility (видимість)
+    - background (задній фон)
+    - border (рамка)
+    !!! Усі інші параметри CSS не будуть впливати на таблиці !!!
+    span - скільки стовпців получить стиль
+ -->
+    <!-- table - Визначає HTML таблицю
+    tr - table row (строка таблиці)
+    td - table date (ячейка таблиці)
+    th - table header (заголовок таблиці) --> <!-- назви хедерів таблиці автоматично стають жирними та розставляються по середині строки -->
+    <!-- caption - добавляє назву таблиці -->
+</body>
+</html>

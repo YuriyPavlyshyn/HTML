@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форми (частина 4)</title>
+</head>
+<body>
+
+    <form action="#">
+        <label for="url">Сайт</label>
+        <input type="url" id="url" value="www.ok.com" readonly> <!-- - тут ми в плейсхолдері задаємо визначений нами URL через value="www.ok.com" та за допомогою атрибуту "readonly" забороняємо редактувати та змінювати це значення, робимо доступ лише для читання. Точно таку саму заборону для редактування значень ми можемо здійснити за допомогою атрибуту "disabled" -->
+    </form>
+        <br>
+        <br>
+        <br>
+        <br>
+
+    <form action="#">
+        <label for="meal">Виберіть їжу та напої:</label>
+        <br>
+        <select name="meal" id="meal" multiple size="4"> <!-- - тут ми створюємо випадайку з двома підгрупами multiple та size="4" додаємо можливість обирати через Ctrl декілька опцій зі списку а також розширюємо видимість списку на 4 позиції-->
+            <optgroup label="Cоуси">
+                <option value="texas">Техас</option>
+                <option value="chilli">Чілі</option>
+                <option value="barbejue">Барбекю</option>
+            </optgroup>
+            <optgroup label="Напої">
+                <option value="cola">Кола</option>
+                <option value="fanta">Фанта</option>
+                <option value="sprite">Спрайт</option>
+            </optgroup>
+        </select>
+        <br>
+        <br>
+        <input type="submit" value="Відправити">
+    </form>
+        <br>
+        <br>
+        <br>
+        <br>
+
+    <form action="#">
+        <label for="color">Виберіть будь - ласка колір</label>
+        <input type="color" id="color" > <!-- - тут зявляється контейнер з можливістю вибору палітри кольорів -->
+        <br>
+        <br>
+        <input type="submit" value="Відправити">
+    </form>
+        <br>
+        <br>
+        <br>
+        <br>
+
+    <form action="#">
+        <label for="email">Введіть адресу електронної пошти</label>
+        <input type="email" id="email" > <!-- - тут при введенні даних про імейл - інпут автоматично перевіряє його валідність та правильність -->
+        <br>
+        <br>
+        <label for="url">Сайт</label>
+        <input type="url" id="url"> <!-- - тут при введенні даних про URL - інпут автоматично перевіряє його валідність та правильність -->
+        <br>
+        <br>
+        <input type="submit" value="Відправити">
+    </form>
+        <br>
+        <br>
+        <br>
+        <br>
+
+    <form action="#">
+        <label for="user">Імя</label>
+        <input type="text" name="user-name" id="user" placeholder="Введіть імя"> <!-- - тут ми вводимо підсказку в плейсхолдер -->
+        <br>
+        <br>
+        <label for="pass">Пароль</label>
+        <input type="password" name="password" id="pass" placeholder="Введіть пароль"> <!-- - тут ми вводимо підсказку в плейсхолдер -->
+        <br>
+        <br>
+        <input type="submit" value="Відправити">
+    </form>
+        <br>
+        <br>
+        <br>
+        <br>
+
+    <form action="#">
+        <label for="tell">Введіть будь - ласка Ваш номер телефону:<br>Правильний формат введення номеру телефону здійснююється за наступним форматом: [0-9]{3}-[0-9]{2}-[0-9]{7}</label>
+        <br>
+        <input type="tell" name="tell" id="tell" pattern="[0-9]{3}-[0-9]{2}-[0-9]{7}"> <!-- - тут ми задаємо правильний формат введення номеру телефону, спочатку йдуть 3 цифри від 0 до 9, після цього "-", потім знову 2 цифри від 0 до 9, після цього "-" та останнє: 7 цифр від 0 до 9. Якщо ми введемо дані за не правильним форматом появиться повідомлення про це -->
+        <br>
+        <br>
+        <input type="submit" value="Відправити">
+    </form>
+        <br>
+        <br>
+        <br>
+        <br>
+
+    <form action="#">
+        <label for="passport">Паспортні дані</label>
+        <input type="text" name="password" id="passport" pattern="[0-9]{3}-[0-9]{4}-[a-z]{4}"> <!-- - тут ми задаємо правильний формат введення паспортних даних, спочатку йдуть 3 цифри від 0 до 9, після цього "-", потім знову 4 цифри від 0 до 9, після цього "-" та останнє: 4 букви від "a" до "z". Якщо ми введемо дані за не правильним форматом появиться повідомлення про це -->
+        <br>
+        <br>
+        <input type="submit" value="Відправити">
+    </form>
+        <br>
+        <br>
+        <br>
+        <br>
+
+    <form action="#">
+        <label for="user">Імя</label>
+        <input type="text" name="user-name" id="user" autocomplete="on"> <!-- - атрибут autocomplete="on" включає автозаповнення даними які вносились раніше у даний інпут -->
+        <br>
+        <br>
+        <label for="pass">Пароль</label>
+        <input type="password" name="password" id="pass" autocomplete="off"> <!-- - атрибут autocomplete="off" виключає автозаповнення даними які вносились раніше у даний інпут -->
+        <br>
+        <br>
+        <input type="submit" value="Відправити">
+    </form>
+        <br>
+        <br>
+        <br>
+        <br>
+
+
+    <form action="#">
+        <fieldset> <!-- - охоплює усі значення інпутів у рамку (бордер) -->
+            <legend>Основні дані користувача</legend> <!-- - підпис до філдсету -->
+            Name: <input type="text">
+            Adress: <input type="text">
+            E-mail: <input type="text">
+            Phone: <input type="text">
+        </fieldset>
+        <br>
+        <br>
+        <fieldset> 
+            <legend>Виберіть будь - ласка Вашу стать</legend> 
+            Чоловік: <input type="radio">
+            Жінка: <input type="radio">
+        </fieldset>
+        <br>
+        <br>
+        <input type="submit" value="Відправити">
+        <input type="reset" value="Скинути">
+    </form>
+        <br>
+        <br>
+        <br>
+        <br>
+
+    <form action="#" oninput="monthoutput.value=month.value">
+        1 <input type="range" min="1" max="12" step="1" name="month"> 12 <!-- - шкала від меншого до більшого значення з відображенням нижче обраного значення відповідно до визначеної позиції ренджу -->
+        <br>
+        <br>
+        <output name="monthoutput"></output>
+        <br>
+        <br>
+    </form>
+    
+
+</body>
+</html>
